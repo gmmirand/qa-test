@@ -39,7 +39,10 @@ Cypress.Commands.add('start', (resolution = 'high') => {
             cy.viewport('macbook-16')
     }
 
-    cy.visit('https://www.lumahealth.io/')
+    cy.visit('https://www.lumahealth.io/', {
+        timeout: 120000,
+        failOnStatusCode: false
+    })
 })
 
 

@@ -1,4 +1,4 @@
-describe.only('Validate main elements from homePage - High resolution', () => {
+describe('Validate main elements from homePage - High resolution', () => {
 
     const mainMenus = ['Platform', 'Who We Serve', 'Integrations', 'Learn', 'About us'];
     const footerTitles = [
