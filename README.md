@@ -8,6 +8,19 @@ Tests can be executed **locally** or automatically via **CI/CD pipelines**, ensu
 
 ---
 
+## Test Results
+
+<img width="756" height="474" alt="Screenshot 2025-08-26 at 22 29 33" src="https://github.com/user-attachments/assets/b0b23254-5b7e-4271-bd09-1316aa0d22bf" />
+
+
+**Results with Mocha**
+
+
+<img width="1145" height="504" alt="image" src="https://github.com/user-attachments/assets/5782af7d-bac7-47e6-81bf-cdf254f7b721" />
+
+
+---
+
 ## Table of Contents
 
 * [About the Project](#about-the-project)
