@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/gmmirand/qa-test/issues"
   },
-  "homepage": "https://github.com/gmmirand/qa-test#readme"
+  "homepage": "https://github.com/gmmirand/qa-test#readme",
+  "devDependencies": {
+    "cypress": "^15.0.0"
+  }
 }
