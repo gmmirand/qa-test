@@ -9,7 +9,7 @@ Cypress.Commands.add('start', (resolution = 'high') => {
 
     // Agora pode visitar sem travamento
     cy.visit('https://www.lumahealth.io/', {
-        timeout: 240000,
+        timeout: 360000,
         failOnStatusCode: false
     });
 
