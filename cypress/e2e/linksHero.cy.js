@@ -1,5 +1,11 @@
 const viewports = ['high', 'med', 'low'];
 
+/**
+ * Validates that a hero button:
+ * - Is visible
+ * - Contains the expected text
+ * - Opens the expected URL (after removing the target attribute to stay in the same tab)
+ */
 const validateHeroButton = (selector, text, url) => {
   cy.get(selector)
     .should('be.visible')
@@ -13,21 +19,21 @@ viewports.forEach(resolution => {
   describe(`Hero Section - Main Links - ${resolution.toUpperCase()} Res`, () => {
     
     beforeEach(() => {
-      cy.start(resolution);
+      cy.start(resolution); // Sets viewport and navigates to homepage
     });
 
     it('Both Hero Buttons should be visible and navigate correctly', () => {
-      // Botão primário
+      // Validate primary CTA button (Book a Demo)
       validateHeroButton(
         'a.button.hero-button.primary',
         'Build your demo',
         'https://www.lumahealth.io/book-a-demo/'
       );
 
-      // Volta para a home para testar o segundo botão
-      cy.start(resolution); // pode usar cy.visit('https://www.lumahealth.io/') também
+      // Reload homepage to validate secondary CTA button
+      cy.start(resolution);
 
-      // Botão secundário
+      // Validate secondary CTA button (Product Info)
       validateHeroButton(
         'a.button.hero-button.outlined',
         'See what it does',
