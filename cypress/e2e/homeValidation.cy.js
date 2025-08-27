@@ -30,7 +30,7 @@ viewports.forEach(({ name, hamburger }) => {
         mainMenus.forEach(menu =>
           cy.contains('#navbar .main-menu-v2 > li a', menu, { matchCase: false }).should('exist')
         );
-      } 
+      }
       // If on desktop, validate that the full menu and action buttons are visible
       else {
         mainMenus.forEach(menu =>
@@ -40,8 +40,8 @@ viewports.forEach(({ name, hamburger }) => {
         // Validate header action buttons ("Log in" and "Get a demo")
         cy.checkButton('#header_login', 'Log in', 'https://next.lumahealth.io/login');
         cy.checkButton(
-          '#navbar .actions a:contains("Get a demo")', 
-          'Get a demo', 
+          '#navbar .actions a:contains("Get a demo")',
+          'Get a demo',
           'https://www.lumahealth.io/book-a-demo'
         );
       }
@@ -56,13 +56,13 @@ viewports.forEach(({ name, hamburger }) => {
 
       // Validate hero section buttons and their URLs
       cy.checkButton(
-        '.hero-button-group a[title="Build your demo"]', 
-        'Build your demo', 
+        '.hero-button-group a[title="Build your demo"]',
+        'Build your demo',
         'https://www.lumahealth.io/book-a-demo'
       );
       cy.checkButton(
-        '.hero-button-group a[title="See what it does"]', 
-        'See what it does', 
+        '.hero-button-group a[title="See what it does"]',
+        'See what it does',
         'https://www.lumahealth.io/patient-success-platform'
       );
     });
@@ -87,8 +87,8 @@ viewports.forEach(({ name, hamburger }) => {
       // Validate final CTA (Call-to-Action) section with the "Book a demo" button
       cy.get('section.get-started-patient-success .luma-banner-container').should('be.visible');
       cy.checkButton(
-        'section.get-started-patient-success a.button.primary', 
-        'Book a demo', 
+        'section.get-started-patient-success a.button.primary',
+        'Book a demo',
         'https://www.lumahealth.io/book-a-demo'
       );
     });

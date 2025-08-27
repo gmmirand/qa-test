@@ -21,6 +21,9 @@ const FOOTER_LINKS = [
         header: 'Information Security, Data Privacy, and Trust at Luma Health'
     },
 ];
+
+const RESOLUTIONS = ['high', 'med', 'low'];
+
 // Validates footer link navigation (handles internal and external links)
 function validateFooterLink(link) {
     cy.log(`Validating footer link: ${link.title}`);
